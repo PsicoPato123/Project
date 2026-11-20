@@ -26,48 +26,63 @@ void guardarVehiculos(carro* lista, int total);
         std::cout << "Error al abrir registro.txt\n";
     }
 }
+
+
 void EstructuraMapa(std::string** mapa, int fila, int columna){
 
-    // Bordes o paredes
+    // Inicializar todo como paredes
     for(int i = 0; i < fila; i++){
         for(int j = 0; j < columna; j++){
             mapa[i][j] = "P";
         }
     }
-    // Calles de circulación
-    for(int i = 1; i < fila - 1; i++){
-        for(int j = 1; j < columna - 1; j++){
-            mapa[i][j] = "V";
-        }
-    }
+
     // Cinco modulos de parqueadero
     for(int modulo = 0; modulo < 5; modulo++){
-        int fila1 = 1 + modulo * 4;
-        int fila2 = fila1 + 2;
 
+        int fila1 = 1 + modulo * 4;
+        int filaPasillo = fila1 + 1;
+        int fila2 = fila1 + 2;
+    // Conexiones entre los modulos
+    for(int modulo = 0; modulo < 5; modulo++){
+
+        int filaConexion = 4 + modulo * 4;
+
+        if(filaConexion < fila - 1){
+        for(int j = 0; j <= 11; j++){
+            mapa[filaConexion][j] = "V";
+        }
+    }
+}
+        // Diez puestos a cada lado del pasillo
         for(int j = 1; j <= 10; j++){
             mapa[fila1][j] = "L";
             mapa[fila2][j] = "L";
         }
-    }
-    // Accesos de circulacion a los modulos
-        for(int i = 2; i < 20; i += 4){
-            mapa[i][18] = "V";
-}
-    // Via principal de circulacion
-        for(int i = 1; i < fila - 1; i++){
-            mapa[i][19] = "v";
-        } 
-    // Entrada y salida
-        mapa[0][12] = "E";
-        mapa[fila - 1][columna - 2] = "S";
-    // Conexion de entrada
-        for(int j = 13; j < 20; j++){
-            mapa[0][j] = ">";
-        }
-        mapa[fila - 1][19] = ">";
 
+        // Pasillo de circulacion
+        for(int j = 0; j <= 11; j++){
+            mapa[filaPasillo][j] = "V";
+        }
+    }
+
+    // Via izquierda: entrada, circulacion hacia abajo
+    for(int i = 1; i < fila - 1; i++){
+        mapa[i][0] = "v";
+    }
+
+// Via derecha: solo una columna de circulacion
+for(int i = 1; i < fila - 1; i++){
+    mapa[i][11] = "^";
 }
+
+    // Entrada superior izquierda
+    mapa[0][0] = "E";
+
+    // Salida superior derecha
+    mapa[0][11] = "S";
+}
+
         //Creación de función que haga visible el mapa
     void MostrarMapa(std::string** mapa, int fila, int columna){
         std::ofstream file("Mapa.txt");
@@ -102,7 +117,11 @@ void EstructuraMapa(std::string** mapa, int fila, int columna){
                 }else if(mapa[i][j] == "v"){
                     std::cout << GREEN << "v " << RESET;
                     file << "v ";
-                } else if(mapa[i][j] == "E"){
+                } 
+                else if(mapa[i][j] == "^"){
+                    std::cout << GREEN << "^ " << RESET;
+                    file << "^ ";
+                }else if(mapa[i][j] == "E"){
                     std::cout<<BLUE<<"E "<<RESET;
                     file<<"E ";
                 } else if(mapa[i][j] == "S"){
@@ -179,7 +198,7 @@ void EstructuraMapa(std::string** mapa, int fila, int columna){
             }
 // Convertir el código a coordenadas reales
         int filas = (letra - 'A') * 2 + 1;
-        int columnas = (numero - 1) * 2 + 1;
+        int columnas = numero;
 
         if(filas < 0 || filas >= fila || columnas < 0 || columnas >= columna){
             std::cout << "Posicion invalida\n";
@@ -405,7 +424,7 @@ void cargarVehiculos(std::string** mapa, carro* lista, int fila, int columna, in
     int main (){  
         //Creación del mapa dinámico
         int fila =22; 
-        int columna=22;
+        int columna=12;
         std::string** mapa = new std::string*[fila];
         carro* lista = new carro[fila*columna]; // Lista para registrar los vehículos, tamaño máximo igual al número de espacios
         int total = 0; // Contador de vehículos registrados
