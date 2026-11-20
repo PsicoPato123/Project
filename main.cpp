@@ -50,18 +50,22 @@ void EstructuraMapa(std::string** mapa, int fila, int columna){
             mapa[fila2][j] = "L";
         }
     }
+    // Accesos de circulacion a los modulos
+        for(int i = 2; i < 20; i += 4){
+            mapa[i][18] = "V";
+}
     // Via principal de circulacion
         for(int i = 1; i < fila - 1; i++){
             mapa[i][19] = "v";
-        }
-        // Conexion de entrada
-        for(int j = 12; j < 19; j++){
-            mapa[0][j] = ">";
-        }   
+        } 
     // Entrada y salida
         mapa[0][12] = "E";
         mapa[fila - 1][columna - 2] = "S";
-
+    // Conexion de entrada
+        for(int j = 13; j < 20; j++){
+            mapa[0][j] = ">";
+        }
+        mapa[fila - 1][19] = ">";
 
 }
         //Creación de función que haga visible el mapa
@@ -89,6 +93,15 @@ void EstructuraMapa(std::string** mapa, int fila, int columna){
                 } else if(mapa[i][j] == "L"){
                     std::cout<<WHITE<<"L "<<RESET;
                     file<<"L ";
+                }  else if(mapa[i][j] == ">"){
+                    std::cout << GREEN << "> " << RESET;
+                    file << "> "
+                ;}  else if(mapa[i][j] == "<"){
+                    std::cout << GREEN << "< " << RESET;
+                    file << "< ";
+                }else if(mapa[i][j] == "v"){
+                    std::cout << GREEN << "v " << RESET;
+                    file << "v ";
                 } else if(mapa[i][j] == "E"){
                     std::cout<<BLUE<<"E "<<RESET;
                     file<<"E ";
