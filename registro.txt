@@ -1,0 +1,62 @@
+Entrada - Placa: rew343 - Pos: a5 - Hora: Tue Nov 17 19:45:30 2026
+
+Entrada - Placa: dfg654 - Pos: c6 - Hora: Tue Nov 17 20:54:26 2026
+
+SALIDA - Placa: dfg654 - Tiempo: 0.028000 horas - Pago: $168 - Hora: Tue Nov 17 20:56:07 2026
+
+Entrada - Placa: asd123 - Pos: c6 - Hora: Tue Nov 17 20:58:46 2026
+
+Entrada - Placa: asd345 - Pos: c6 - Hora: Tue Nov 17 21:26:16 2026
+
+Entrada - Placa: sdf234 - Pos: c6 - Hora: Tue Nov 17 21:36:03 2026
+
+Entrada - Placa: dff456 - Pos: f4 - Hora: Tue Nov 17 21:55:21 2026
+
+Entrada - Placa: asd345 - Pos: a1 - Hora: Tue Nov 17 21:58:58 2026
+
+Entrada - Placa: dfg678 - Pos: a2 - Hora: Tue Nov 17 21:59:07 2026
+
+Entrada - Placa: vfr457 - Pos: j10 - Hora: Tue Nov 17 21:59:18 2026
+
+SALIDA - Placa: vfr457 - Tiempo: 0.228000 horas - Pago: $1368 - Hora: Tue Nov 17 22:12:39 2026
+
+Entrada - Placa: abc123 - Pos: a1 - Hora: Tue Nov 17 22:13:41 2026
+
+Entrada - Placa: zyx789 - Pos: b4 - Hora: Tue Nov 17 22:13:54 2026
+
+SALIDA - Placa: zyx789 - Tiempo: 0.007333 horas - Pago: $44 - Hora: Tue Nov 17 22:14:08 2026
+
+SALIDA - Placa: zyx789 - Tiempo: 0.006833 horas - Pago: $41 - Hora: Tue Nov 17 22:14:19 2026
+
+Entrada - Placa: sdf456 - Pos: e4 - Hora: Tue Nov 17 22:52:18 2026
+
+Entrada - Placa: dfg543 - Pos: a1 - Hora: Tue Nov 17 22:58:00 2026
+
+SALIDA - Placa: dfg543 - Tiempo: 0.005500 horas - Pago: $33 - Hora: Tue Nov 17 22:58:20 2026
+
+Entrada - Placa: hff765 - Pos: f4 - Hora: Tue Nov 17 23:13:00 2026
+
+Entrada - Placa: oiu876 - Pos: g5 - Hora: Tue Nov 17 23:13:15 2026
+
+Entrada - Placa: fgt567 - Pos: h5 - Hora: Tue Nov 17 23:13:26 2026
+
+Entrada - Placa: vfr - Pos: f3 - Hora: Tue Nov 17 23:13:34 2026
+
+Entrada - Placa: dfg456 - Pos: a3 - Hora: Tue Nov 17 23:13:44 2026
+
+Entrada - Placa: vfr244 - Pos: a7 - Hora: Tue Nov 17 23:14:03 2026
+
+Entrada - Placa: iuy765 - Pos: i8 - Hora: Tue Nov 17 23:14:52 2026
+
+Entrada - Placa: edc765 - Pos: j3 - Hora: Tue Nov 17 23:16:04 2026
+
+Entrada - Placa: dfg876 - Pos: d4 - Hora: Tue Nov 17 23:17:45 2026
+
+Entrada - Placa: asc876 - Pos: f5 - Hora: Tue Nov 17 23:22:50 2026
+
+Entrada - Placa: XXX123 - Pos: J8 - Hora: Wed Nov 18 09:21:18 2026
+
+Entrada - Placa: 444uuuu - Pos: A1 - Hora: Wed Nov 18 09:23:35 2026
+
+SALIDA - Placa: XXX123 - Tiempo: 0.060833 horas - Pago: $365 - Hora: Wed Nov 18 09:24:57 2026
+
